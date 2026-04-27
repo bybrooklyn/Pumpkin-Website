@@ -1,6 +1,6 @@
 # Pumpkin Site
 
-Astro + TypeScript static site for pumpkinmc.org.
+a boring ai refactor because thats cool. HTML+CSS —> Astro+TS
 
 ## Commands
 
