@@ -2,6 +2,8 @@
 
 a boring ai refactor because thats cool. HTML+CSS —> Astro+TS
 
+**it IS identical to the HTML/CSS version, just more maintainable**
+
 ## Commands
 
 ```sh
