@@ -1,0 +1,193 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title={"Download Pumpkin - Blazingly Fast Minecraft Server"}
+  description={"Download the latest release of Pumpkin, the fastest Minecraft server."}
+  ogTitle={"Download Pumpkin"}
+  ogDescription={"Self-contained executable. No Java required. Just download, run, and play."}
+  ogUrl={"https://pumpkinmc.org/download/"}
+  pageStyle={"/styles/download.css"}
+>
+<main>
+      <section class="download-hero">
+        <h1 class="section-title">
+          <span class="highlight">Download</span> Pumpkin
+        </h1>
+        <p>
+          Self-contained executable. No Java required. Just download, run, and
+          play.
+        </p>
+
+        <!-- Auto-detect OS download -->
+        <div class="auto-download">
+          <a id="auto-download-btn" href="#" class="btn btn-primary btn-xl">
+            <i id="auto-download-icon" class="fab fa-windows"></i>
+            <span id="auto-download-text">Download for Windows</span>
+            <i class="fa-solid fa-download"></i>
+          </a>
+          <p class="auto-download-meta">
+            <span id="auto-download-arch">x86-64</span> &bull;
+            <span id="auto-download-build">Loading...</span>
+          </p>
+          <p class="auto-download-alt">
+            Not your OS? <a href="#all-downloads">See all downloads below</a>
+          </p>
+        </div>
+
+        <h2 id="all-downloads" class="downloads-heading">All Platforms</h2>
+
+        <div class="download-grid">
+          <!-- Windows -->
+          <div class="download-card">
+            <h3><i class="fab fa-windows"></i> Windows</h3>
+            <div class="download-options">
+              <a
+                href="https://github.com/Pumpkin-MC/Pumpkin/releases/download/nightly/pumpkin-X64-Windows.exe"
+                class="download-option"
+              >
+                <div class="arch">
+                  <span>x86-64</span>
+                  <span class="badge badge-intel">Intel</span>
+                  <span class="badge badge-amd">AMD</span>
+                </div>
+                <i class="fa-solid fa-download"></i>
+              </a>
+              <a
+                href="https://github.com/Pumpkin-MC/Pumpkin/releases/download/nightly/pumpkin-ARM64-Windows.exe"
+                class="download-option"
+              >
+                <div class="arch">
+                  <span>ARM64</span>
+                </div>
+                <i class="fa-solid fa-download"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Linux -->
+          <div class="download-card">
+            <h3><i class="fab fa-linux"></i> Linux</h3>
+            <div class="download-options">
+              <a
+                href="https://github.com/Pumpkin-MC/Pumpkin/releases/download/nightly/pumpkin-X64-Linux"
+                class="download-option"
+              >
+                <div class="arch">
+                  <span>x86-64</span>
+                  <span class="badge badge-intel">Intel</span>
+                  <span class="badge badge-amd">AMD</span>
+                </div>
+                <i class="fa-solid fa-download"></i>
+              </a>
+              <a
+                href="https://github.com/Pumpkin-MC/Pumpkin/releases/download/nightly/pumpkin-ARM64-Linux"
+                class="download-option"
+              >
+                <div class="arch">
+                  <span>ARM64</span>
+                </div>
+                <i class="fa-solid fa-download"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- macOS -->
+          <div class="download-card">
+            <h3><i class="fab fa-apple"></i> macOS</h3>
+            <div class="download-options">
+              <a
+                href="https://github.com/Pumpkin-MC/Pumpkin/releases/download/nightly/pumpkin-ARM64-macOS"
+                class="download-option"
+              >
+                <div class="arch">
+                  <span>ARM64</span>
+                  <span class="badge badge-apple">Apple Silicon</span>
+                </div>
+                <i class="fa-solid fa-download"></i>
+              </a>
+              <a
+                href="https://github.com/Pumpkin-MC/Pumpkin/releases/download/nightly/pumpkin-X64-macOS"
+                class="download-option"
+              >
+                <div class="arch">
+                  <span>x86-64</span>
+                  <span class="badge badge-intel">Intel</span>
+                </div>
+                <i class="fa-solid fa-download"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="download-info">
+          <i class="fa-solid fa-circle-info"></i>
+          <p>
+            <strong>Note:</strong> Official x86-64 builds target x86-64
+            microarchitecture Level 3 (circa 2013). If your CPU predates these
+            features, you can still compile Pumpkin from source without them.
+          </p>
+        </div>
+
+        <p class="download-note">
+          Need older versions? Check
+          <a
+            href="https://github.com/Pumpkin-MC/Pumpkin/releases"
+            target="_blank"
+            rel="noopener"
+            >GitHub Releases</a
+          >.
+        </p>
+      </section>
+
+      <!-- Quick Start -->
+      <section class="quickstart">
+        <div class="quickstart-content">
+          <div class="quickstart-text">
+            <h2>Get Started in Seconds</h2>
+            <p>
+              Download the executable, double-click, and your server is running.
+              Check the docs for configuration options.
+            </p>
+            <div class="quickstart-buttons">
+              <a href="https://docs.pumpkinmc.org/" class="btn btn-primary">
+                Quick Start Guide <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a
+                href="https://discord.gg/pumpkinmc"
+                class="btn btn-secondary"
+              >
+                <i class="fab fa-discord"></i> Get Help
+              </a>
+            </div>
+          </div>
+          <div class="quickstart-visual">
+            <div class="terminal">
+              <div class="terminal-header">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+              </div>
+              <div
+                class="terminal-body terminal-demo"
+                id="quickstart-terminal"
+                aria-label="Animated Pumpkin startup demo"
+              >
+                <div class="terminal-line terminal-command" id="terminal-command-line">
+                  <span class="prompt">$</span>
+                  <span id="terminal-command-text"></span>
+                  <span class="terminal-cursor" aria-hidden="true"></span>
+                </div>
+                <div class="terminal-output" id="terminal-output"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  <script>
+    import "../../scripts/download";
+  </script>
+</BaseLayout>

@@ -1,148 +1,17 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' https://avatars.githubusercontent.com data:; connect-src 'self' https://api.github.com https://www.google-analytics.com; frame-ancestors 'none'"
-    />
-    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-    <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
-    <title>Pumpkin - Blazingly Fast Minecraft Server</title>
-    <meta
-      name="description"
-      content="Pumpkin: The fastest, most efficient Minecraft server software. Written in Rust."
-    />
-    <meta property="og:title" content="Pumpkin - Blazingly Fast Minecraft Server" />
-    <meta property="og:description" content="1000x faster startup. 18x less memory. Built with Rust for maximum performance." />
-    <meta property="og:image" content="https://pumpkinmc.org/assets/logos/ogimage.png" />
-    <meta property="og:url" content="https://pumpkinmc.org/" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
-    <link rel="stylesheet" href="styles/common.css" />
-    <link rel="stylesheet" href="styles/home.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha384-rWj9FmWWt3OMqd9vBkWRhFavvVUYalYqGPoMdL1brs/qvvqz88gvLShYa4hKNyqb"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <div class="sticky-top">
-      <div class="info-banner">
-        <i class="fa-solid fa-triangle-exclamation"></i>
-        Pumpkin is in early development and bugs can happen. If you find any, report them on our
-        <a href="https://github.com/Pumpkin-MC/Pumpkin/issues">GitHub</a>.
-      </div>
-      <header>
-      <a href="/" class="logo">
-        <img src="assets/icon.svg" alt="Pumpkin" />
-        <span>Pumpkin</span>
-      </a>
-      <nav>
-        <a href="/">Home</a>
-        <a
-          href="https://docs.pumpkinmc.org/"
-          class="external-nav-link"
-          aria-label="Docs (external site)"
-        >
-          <span>Docs</span>
-          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-        </a>
-        <a href="/developers/">Developers</a>
-        <a href="/contributors/">Contributors</a>
-        <a
-          href="https://blog.pumpkinmc.org/"
-          class="external-nav-link"
-          aria-label="Blog (external site)"
-        >
-          <span>Blog</span>
-          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-        </a>
-        <a
-          href="https://market.pumpkinmc.org/"
-          class="external-nav-link"
-          aria-label="Market (external site)"
-        >
-          <span>Market</span>
-          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-        </a>
-      </nav>
-      <button class="burger-btn" aria-label="Toggle menu" aria-expanded="false">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-      <div class="header-icons">
-        <a
-          href="https://github.com/Pumpkin-MC/Pumpkin"
-          class="icon-btn"
-          title="GitHub"
-        >
-          <i class="fa-brands fa-github"></i>
-        </a>
-        <a
-          href="https://discord.gg/pumpkinmc"
-          class="icon-btn"
-          title="Discord"
-        >
-          <i class="fa-brands fa-discord"></i>
-        </a>
-        <a href="https://x.com/pumpkinmcdev" class="icon-btn" title="X (Twitter)">
-          <i class="fa-brands fa-x-twitter"></i>
-        </a>
-        <a href="https://www.youtube.com/@PumpkinServer" class="icon-btn" title="YouTube">
-          <i class="fa-brands fa-youtube"></i>
-        </a>
-        <a
-          href="https://github.com/sponsors/Pumpkin-MC"
-          class="sponsor-btn"
-          title="Sponsor"
-        >
-          <i class="fa-solid fa-heart"></i>
-        </a>
-        <a href="/download/" class="download-btn">Download</a>
-      </div>
-    </header>
-    </div>
-    <script>
-      document.querySelector(".burger-btn").addEventListener("click", function () {
-        const header = document.querySelector("header");
-        const expanded = this.getAttribute("aria-expanded") === "true";
-        header.classList.toggle("nav-open");
-        this.setAttribute("aria-expanded", !expanded);
-        this.querySelector("i").className = expanded
-          ? "fa-solid fa-bars"
-          : "fa-solid fa-xmark";
-      });
-    </script>
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-QK7NXQQ2ZP"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-QK7NXQQ2ZP");
-    </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8857181057818321"
-     crossorigin="anonymous"></script>
-
-    <main>
+<BaseLayout
+  title={"Pumpkin - Blazingly Fast Minecraft Server"}
+  description={"Pumpkin: The fastest, most efficient Minecraft server software. Written in Rust."}
+  ogTitle={"Pumpkin - Blazingly Fast Minecraft Server"}
+  ogDescription={"1000x faster startup. 18x less memory. Built with Rust for maximum performance."}
+  ogUrl={"https://pumpkinmc.org/"}
+  pageStyle={"/styles/home.css"}
+  includeAdsense
+>
+<main>
       <section class="hero">
         <div class="hero-left">
           <div class="hero-badge">NEW</div>
@@ -167,7 +36,7 @@
         </div>
         <div class="hero-right">
           <div class="hero-card">
-            <img src="assets/icon.svg" alt="Pumpkin Logo" class="hero-logo" />
+            <img src="/assets/icon.svg" alt="Pumpkin Logo" class="hero-logo" />
             <div class="hero-stats">
               <div class="hero-stat">
                 <span class="num">~5ms</span>
@@ -645,34 +514,7 @@
       </section>
     </main>
 
-    <footer>
-      <div class="footer-main">
-        <div class="footer-brand">
-          <img src="assets/icon.svg" alt="Pumpkin" />
-          <span>Pumpkin</span>
-        </div>
-        <div class="footer-links">
-          <a href="https://docs.pumpkinmc.org/">Documentation</a>
-          <a href="https://github.com/Pumpkin-MC">GitHub</a>
-          <a href="https://discord.gg/pumpkinmc">Discord</a>
-          <a href="https://x.com/pumpkinmcdev">X</a>
-          <a href="https://www.youtube.com/@PumpkinServer">YouTube</a>
-          <a href="https://github.com/sponsors/Pumpkin-MC">Sponsor</a>
-        </div>
-      </div>
-      <div class="footer-bottom">Made with ❤️ by <a href="https://marshall.dev" target="_blank" rel="noopener">purdze</a> · Licensed under GPL</div>
-    </footer>
-    <script>
-      const bars = document.querySelectorAll('.comp-bars');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.3 });
-      bars.forEach((el) => observer.observe(el));
-    </script>
-  </body>
-</html>
+  <script>
+    import "../scripts/home";
+  </script>
+</BaseLayout>
